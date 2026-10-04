@@ -19,7 +19,7 @@ Run for one site (`sites/<slug>/`) or all sites. Report findings before changing
 5. **Content.** Find pages with `status: published` older than 6–12 months or losing
    traffic; refresh facts, dates, internal links, and FAQ via `/seo-page` (refresh mode).
    Add 1–2 new posts from the keyword map backlog.
-6. **Design (optional, quarterly).** Run `redesign-existing-projects` as an audit only;
+6. **Design (optional, quarterly).** Run `/redesign-skill` as an audit only;
    propose fixes in its priority order, apply only with user approval.
 7. **Report.** Append a dated entry to `sites/<slug>/CHANGELOG.md`: what was checked,
    what changed, open issues. Commit.

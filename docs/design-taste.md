@@ -30,5 +30,5 @@ Prefer a block theme (Twenty Twenty-Five, Ollie, Frost) or a light classic theme
   (taste-skill section 11.F agrees). Record before/after in `sites/<slug>/CHANGELOG.md`.
 
 ## Which skill to use
-- New site look → `design-taste-frontend` + one preset (`minimalist-ui` or `high-end-visual-design`), chosen from `brand` in `site.yml`.
-- Improving an existing site → `redesign-existing-projects` (audit first, fix in its priority order).
+- New site look → `/taste-skill` + one preset (`/minimalist-skill` or `/soft-skill`), chosen from `brand` in `site.yml`.
+- Improving an existing site → `/redesign-skill` (audit first, fix in its priority order).

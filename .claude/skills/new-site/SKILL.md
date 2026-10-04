@@ -19,8 +19,8 @@ description: Launch a new SEO-ready WordPress site on Hostinger - brief, keyword
    Rank Math, LiteSpeed Cache, sitemap, robots, Organization/LocalBusiness schema,
    llms.txt. Use wordpress-mcp (`wp-admin`) if the site has the MCP adapter; otherwise
    give the user a short hPanel / wp-admin checklist.
-5. **Design.** Pick the look with `design-taste-frontend` plus one preset
-   (`minimalist-ui` or `high-end-visual-design`) from `brand` in `site.yml`, applied through
+5. **Design.** Pick the look with `/taste-skill` plus one preset
+   (`/minimalist-skill` or `/soft-skill`) from `brand` in `site.yml`, applied through
    `theme.json`, block patterns and Additional CSS per `docs/design-taste.md`.
 6. **Core pages** as drafts via `/seo-page`, hero images via `/site-media`.
 7. **Verify:** `python3 scripts/seo_audit.py https://<domain>/sitemap_index.xml`.
