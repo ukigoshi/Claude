@@ -1,0 +1,47 @@
+name: SEO audit
+
+on:
+  schedule:
+    - cron: "17 8 * * 1"   # Mondays 08:17 UTC
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "URL or sitemap to audit (blank = every site in sites/)"
+        required: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect targets
+        id: targets
+        env:
+          TARGET: ${{ github.event.inputs.target }}
+        run: |
+          if [ -n "$TARGET" ]; then
+            echo "list=$TARGET" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          list=""
+          for f in sites/*/site.yml; do
+            case "$f" in sites/_template/*) continue;; esac
+            host=$(grep -E '^canonical_host:' "$f" | awk '{print $2}')
+            [ -n "$host" ] && list="$list ${host%/}/sitemap_index.xml"
+          done
+          echo "list=$list" >> "$GITHUB_OUTPUT"
+      - name: Audit
+        if: steps.targets.outputs.list != ''
+        env:
+          LIST: ${{ steps.targets.outputs.list }}
+        run: |
+          set -o pipefail
+          python scripts/seo_audit.py $LIST --limit 200 | tee audit.txt
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.targets.outputs.list != ''
+        with:
+          name: seo-audit
+          path: audit.txt
