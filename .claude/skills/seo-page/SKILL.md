@@ -15,6 +15,7 @@ Input: site slug + topic or keyword. Read `sites/<slug>/site.yml` and `docs/seo-
    `sites/<slug>/content/<slug>.md`, fill meta title/description, outline, schema, links.
 4. **Write.** Use the `seo-article-writer` skill if available. Brand voice from `site.yml`.
    Answer intent in the first 100 words, include FAQ, cite sources, add internal links.
+   Follow the copy rules in `docs/design-taste.md` (no filler verbs like "elevate", no em-dashes, sentence-case headings).
    Write the body into the same markdown file below the brief.
 5. **Images.** Run `/site-media` for the hero and any inline images.
 6. **Self-audit** against the page-level checklist (or `seo-article-audit`). Fix issues.

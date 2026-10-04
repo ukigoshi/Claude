@@ -12,6 +12,7 @@ WordPress sites hosted on Hostinger. Each site lives in `sites/<slug>/`.
 | Hero images, product shots, short videos | **Higgsfield** MCP (`.mcp.json`, `https://mcp.higgsfield.ai/mcp`, OAuth) |
 | Article writing and on-page audits | `seo-article-writer` / `seo-article-audit`, plus `docs/seo-standards.md` |
 | Schema / JSON-LD | `wp-structured-data` |
+| Visual design quality ("taste") | `design-taste-frontend`, `redesign-existing-projects`, `minimalist-ui`, `high-end-visual-design` in `.claude/skills/` — read `docs/design-taste.md` for the WordPress adaptation |
 | Technical audit of a live site | `python3 scripts/seo_audit.py <url-or-sitemap>` |
 | Code, history, scheduled audits | This GitHub repo + `.github/workflows/seo-audit.yml` |
 
@@ -32,5 +33,6 @@ next best option (e.g. Hostinger hPanel steps for the user to click through).
 - Take (or confirm) a Hostinger backup before plugin/theme/core updates.
 - Never commit secrets. Credentials go in environment variables / GitHub
   secrets (`WP_<SLUG>_USER`, `WP_<SLUG>_APP_PASSWORD`), never in `site.yml`.
-- Follow `docs/seo-standards.md` for every page.
+- Follow `docs/seo-standards.md` for every page. Apply design taste per
+  `docs/design-taste.md`; when taste and SEO/speed conflict, SEO wins.
 - Record what changed on each site in `sites/<slug>/CHANGELOG.md`.
