@@ -12,9 +12,11 @@ on Hostinger, with AI-generated media from Higgsfield.
 2. **Higgsfield** — already configured in `.mcp.json` for Claude Code
    (`https://mcp.higgsfield.ai/mcp`, OAuth on first use). On claude.ai, add it as a
    custom connector with the same URL.
-3. **On each WordPress site** — install the *WordPress MCP Adapter* plugin and create an
-   Application Password (Users → Profile). Store it as an env var / GitHub secret
-   (`WP_<SLUG>_USER`, `WP_<SLUG>_APP_PASSWORD`), never in the repo.
+3. **On each WordPress site** — create an Application Password (Users → Profile) and store it
+   in the cloud environment's settings as `WP_<SLUG>_USER` / `WP_<SLUG>_APP_PASSWORD`
+   (never in the repo or the chat). Allow the site's domain (and `mcp.higgsfield.ai`) under the
+   environment's network access. Claude then edits content through WordPress's REST API.
+   The *WordPress MCP Adapter* plugin is only needed for the wordpress-mcp connector.
 4. **Optional SEO data** — connect Semrush, Ahrefs or Ubersuggest for real keyword volumes.
 
 ## Daily use (ask Claude in this repo)

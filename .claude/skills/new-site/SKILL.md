@@ -17,7 +17,7 @@ description: Launch a new SEO-ready WordPress site on Hostinger - brief, keyword
    make sure SSL is active. Store the website id in `site.yml`.
 4. **Base SEO setup** per `docs/seo-standards.md` "Site-level": permalinks, theme,
    Rank Math, LiteSpeed Cache, sitemap, robots, Organization/LocalBusiness schema,
-   llms.txt. Use wordpress-mcp (`wp-admin`) if the site has the MCP adapter; otherwise
+   llms.txt. Use the WordPress REST API or wordpress-mcp (see CLAUDE.md); otherwise
    give the user a short hPanel / wp-admin checklist.
 5. **Design.** Pick the look with `/taste-skill` plus one preset
    (`/minimalist-skill` or `/soft-skill`) from `brand` in `site.yml`, applied through

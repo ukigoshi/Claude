@@ -19,5 +19,5 @@ description: Generate on-brand, SEO-optimized images or short videos for a site 
 6. SEO metadata: descriptive hyphenated filename with the keyword
    (`emergency-plumber-austin.webp`), alt text describing the image in context,
    title and caption if helpful.
-7. Upload with wordpress-mcp (`wp-content` media) and set it on the draft. Videos:
+7. Upload via the WordPress REST API or wordpress-mcp (see CLAUDE.md) and set it on the draft. Videos:
    keep them short and muted, add a poster image, never let them be the LCP element.

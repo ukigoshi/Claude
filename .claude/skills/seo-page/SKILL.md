@@ -19,7 +19,7 @@ Input: site slug + topic or keyword. Read `sites/<slug>/site.yml` and `docs/seo-
    Write the body into the same markdown file below the brief.
 5. **Images.** Run `/site-media` for the hero and any inline images.
 6. **Self-audit** against the page-level checklist (or `seo-article-audit`). Fix issues.
-7. **Create in WordPress as draft** with wordpress-mcp (`wp-content`): content, slug,
+7. **Create in WordPress as draft** via the WordPress REST API or wordpress-mcp (see CLAUDE.md): content, slug,
    categories, featured image, Rank Math title/description/focus keyword, schema.
    Save the returned id as `wp_id`, set `status: draft`, and give the user the preview link.
 8. Publish only after the user approves. Then update `keyword_map` status and CHANGELOG.
