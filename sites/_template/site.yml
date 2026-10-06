@@ -1,0 +1,39 @@
+# Copy this folder to sites/<slug>/ and fill it in. No secrets here.
+name: "Example Business"
+slug: example
+domain: example.com
+canonical_host: https://example.com   # pick www or non-www, stay consistent
+language: en
+locale: en_US
+
+hostinger:
+  plan: ""            # e.g. Business, Cloud Startup
+  website_id: ""      # from Hostinger (filled after install)
+
+wordpress:
+  theme: astra
+  seo_plugin: rank-math
+  cache_plugin: litespeed-cache
+  admin_url: https://example.com/wp-admin
+  # credentials: env WP_EXAMPLE_USER / WP_EXAMPLE_APP_PASSWORD
+
+business:
+  type: LocalBusiness   # or Organization, Store, ProfessionalService...
+  location: ""          # city/region for local SEO, or "online"
+  audience: ""
+  differentiators: []
+
+brand:
+  voice: "clear, friendly, expert"
+  colors: ["#0F172A", "#2563EB"]
+  image_style: "natural light, realistic photography, warm tones"  # used for Higgsfield prompts
+
+seo:
+  primary_topics: []
+  competitors: []
+  # Keyword map: one primary keyword per URL. Never reuse a keyword.
+  keyword_map:
+    - url: /
+      keyword: ""
+      intent: commercial
+      status: planned   # planned | draft | published | refresh
